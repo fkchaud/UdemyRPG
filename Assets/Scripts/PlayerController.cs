@@ -8,11 +8,21 @@ public class PlayerController : MonoBehaviour
     private new Rigidbody2D rigidbody = default;
     private Animator animator = default;
 
+    private static PlayerController instance;
+
     [SerializeField]
     private float moveSpeed = 1f;
 
     void Start()
     {
+        if (instance == null) InitializeStaticInstance();
+        else Destroy(gameObject);
+    }
+
+    private void InitializeStaticInstance()
+    {
+        instance = this;
+
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
