@@ -8,6 +8,7 @@ public class AreaExit : MonoBehaviour
 
     [SerializeField]
     private string transitionPointName = "";
+    public string TransitionPointName => transitionPointName;
 
     private void Start()
     {

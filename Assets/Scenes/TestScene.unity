@@ -309,11 +309,6 @@ PrefabInstance:
       propertyPath: transitionPointName
       value: Countryside-1
       objectReference: {fileID: 0}
-    - target: {fileID: 6092174692923392590, guid: 2436dd6f801fc8e4fb0c87b819e17806,
-        type: 3}
-      propertyPath: transitionPointName
-      value: Countryside-1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2436dd6f801fc8e4fb0c87b819e17806, type: 3}
 --- !u!1 &2050569550

@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class EntrancePoint : MonoBehaviour
 {
-    [SerializeField]
     private string transitionPointName = "";
 
     private void Start()
     {
-        if (string.IsNullOrWhiteSpace(transitionPointName))
-            Debug.LogError($"{this.GetType().Name} object has not set transitionPointName variable.", this);
+        transitionPointName = GetComponentInParent<AreaExit>().TransitionPointName;
 
         if (PlayerController.Instance.LastTransitionPointName == transitionPointName)
             PlayerController.Instance.transform.position = transform.position;

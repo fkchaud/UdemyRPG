@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private string lastTransitionPointName = "";
     public string LastTransitionPointName { get => lastTransitionPointName; set => lastTransitionPointName = value; }
 
-    void Start()
+    void Awake()
     {
         if (instance == null) InitializeStaticInstance();
         else Destroy(gameObject);
