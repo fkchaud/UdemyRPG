@@ -9,9 +9,13 @@ public class PlayerController : MonoBehaviour
     private Animator animator = default;
 
     private static PlayerController instance;
+    public static PlayerController Instance => instance;
 
     [SerializeField]
     private float moveSpeed = 1f;
+
+    private string lastTransitionPointName = "";
+    public string LastTransitionPointName { get => lastTransitionPointName; set => lastTransitionPointName = value; }
 
     void Start()
     {

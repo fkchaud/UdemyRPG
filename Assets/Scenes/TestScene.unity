@@ -268,7 +268,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9916901719584300, guid: 2436dd6f801fc8e4fb0c87b819e17806, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.53
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 9916901719584300, guid: 2436dd6f801fc8e4fb0c87b819e17806, type: 3}
       propertyPath: m_LocalPosition.y
@@ -303,6 +303,16 @@ PrefabInstance:
         type: 3}
       propertyPath: targetSceneName
       value: Test2Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841867352145348682, guid: 2436dd6f801fc8e4fb0c87b819e17806,
+        type: 3}
+      propertyPath: transitionPointName
+      value: Countryside-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092174692923392590, guid: 2436dd6f801fc8e4fb0c87b819e17806,
+        type: 3}
+      propertyPath: transitionPointName
+      value: Countryside-1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2436dd6f801fc8e4fb0c87b819e17806, type: 3}
