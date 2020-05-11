@@ -10,10 +10,7 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private Tilemap tilemap = null;
 
-    private float minLimitX = 0;
-    private float minLimitY = 0;
-    private float maxLimitX = 0;
-    private float maxLimitY = 0;
+    private Bounds bounds;
 
     private void Awake()
     {
@@ -23,10 +20,10 @@ public class CameraController : MonoBehaviour
         float halfCameraHeight = Camera.main.orthographicSize;
         float halfCameraWidth = halfCameraHeight * Camera.main.aspect;
 
-        minLimitX = tilemap.localBounds.min.x + halfCameraWidth;
-        minLimitY = tilemap.localBounds.min.y + halfCameraHeight;
-        maxLimitX = tilemap.localBounds.max.x - halfCameraWidth;
-        maxLimitY = tilemap.localBounds.max.y - halfCameraHeight;
+        bounds.min.x = tilemap.localBounds.min.x + halfCameraWidth;
+        bounds.min.y = tilemap.localBounds.min.y + halfCameraHeight;
+        bounds.max.x = tilemap.localBounds.max.x - halfCameraWidth;
+        bounds.max.y = tilemap.localBounds.max.y - halfCameraHeight;
     }
 
     void Start()
@@ -37,8 +34,8 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         transform.position = new Vector3(
-            Mathf.Clamp(target.position.x, minLimitX, maxLimitX),
-            Mathf.Clamp(target.position.y, minLimitY, maxLimitY),
+            Mathf.Clamp(target.position.x, bounds.min.x, bounds.max.x),
+            Mathf.Clamp(target.position.y, bounds.min.y, bounds.max.y),
             transform.position.z
         );
     }
